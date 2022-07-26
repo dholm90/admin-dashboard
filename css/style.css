@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.dashboard {
+    background-color: #1892D4;
+    color: white;
+    grid-area: 1 / 1 / 7 / 2;
+}
+
+.header {
+    border: 1px solid red;
+    grid-area: 1 / 2 / 2 / 7;
+}
+
+.content {
+    border: 1px solid yellow;
+    grid-area: 2 / 2 / 7 / 7;
+}
