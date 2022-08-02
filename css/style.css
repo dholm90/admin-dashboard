@@ -13,6 +13,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
+    overflow: auto;
 }
 
 .dashboard {
@@ -35,22 +36,28 @@ body {
 
 .navigation {
     grid-area: 2 / 1 / 3 / 2;
+
+}
+
+.navigation,
+.branding {
     font-size: 1.5rem;
     font-weight: 550;
     display: grid;
-    gap: 0.9rem;
+    gap: 1.5rem;
 }
 
-.navigation li {
-    align-content: center;
+.navigation li,
+.branding li,
+.dash-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 900;
 }
 
 .branding {
     grid-area: 3 / 1 / 4 / 2;
-    font-size: 1.5rem;
-    font-weight: 550;
-    display: grid;
-    gap: 0.9rem;
 }
 
 .header {
@@ -59,8 +66,43 @@ body {
     box-shadow: 0 4px 4px -4px gray;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    padding: 1rem 3rem;
 
 }
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    justify-content: space-between;
+}
+
+.search,
+.notifications {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search {
+    background-color: #E2E8F0;
+    width: 48rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
+.notifications {
+    gap: 2rem;
+
+}
+
+.header-name {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
 
 .small-user-img {
     height: 3rem;
@@ -68,6 +110,51 @@ body {
     border-radius: 100%;
     background-color: #1892D4;
 }
+
+.bottom-bar,
+.header-welcome {
+    display: flex;
+    align-items: center;
+}
+
+.bottom-bar {
+    justify-content: space-between;
+}
+
+.header-welcome {
+    gap: 1.5rem;
+}
+
+.welcome-message {
+    font-weight: 700;
+}
+
+.welcome-name {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-buttons button {
+    background-color: #1892D4;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
 
 .large-user-img {
     height: 5rem;
@@ -82,6 +169,7 @@ body {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(2, 1fr);
     margin: 1rem 2rem;
+    overflow: auto;
 }
 
 .cards {
